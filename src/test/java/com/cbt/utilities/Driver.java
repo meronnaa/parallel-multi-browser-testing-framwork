@@ -17,8 +17,9 @@ public class Driver {
 	public static WebDriver getDriver(String browser) {
 
 		if (driver == null) {
-			// if the browser from the properties file
-			// if no browser is passed
+			//first we check if the value from xml file is null or not
+			//if the value from xml file NOT NULL we use
+			//the value from xml file is null,we get the browser from properties file
 			browser = browser == null ? ConfigurationReader.getProperty("browser") : browser;
 
 			switch (browser) {
